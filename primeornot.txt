@@ -1,0 +1,17 @@
+mov bx,0002
+mov si,3000
+mov di,4000
+mov ax,[si]
+mov dx,0001
+cmp ax,0002
+jz 16
+mov dx,0000
+div bx
+cmp dx,0000
+je 16
+mov ax,[si]
+inc bx
+cmp ax,bx
+jnz  8
+mov [di],dx
+hlt

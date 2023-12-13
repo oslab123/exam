@@ -12,7 +12,7 @@ mov BL, [SI]
 
 cmp al,BL
 
-jnc
+jnc  19
 
 Μου al,bl
 
@@ -20,13 +20,13 @@ mov ah,bl
 
 dec cl
 
-jnz
+jnz  9
 
 INC SI
 
 MOV [SI], AL (Largest)
 
-INC 31
+INC SI
 
 MOV [SI], AH (smallest )
 
