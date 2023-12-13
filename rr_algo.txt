@@ -1,0 +1,33 @@
+Algorithm: Round Robin Scheduling
+
+1. Start
+2. Declare a process structure with attributes: id, at, bt, ct, tat, wt, rt, completed, status, empty.
+
+3. Define a function sortByID to sort an array of processes based on their IDs.
+
+4. Define a function printResult to print the results of the scheduling algorithm.
+
+5. Define a circular queue with functions: enqueue and dequeue to manage ready processes.
+
+6. Define a function addNewProcesses to add newly arrived processes to the ready queue based on their arrival time.
+
+7. Define the Round Robin Scheduling function (RR):
+   a. Initialize time, totalTAT, totalWT, and a ready queue.
+   b. Use a loop until all processes are completed.
+   c. Inside the loop:
+      - Add newly arrived processes to the ready queue.
+      - Dequeue a process from the ready queue.
+      - Run the process for a quantum or until it completes.
+      - If the process completes within the quantum, update completion time, turnaround time, waiting time, and set the process as completed.
+      - If the process doesn't complete within the quantum, enqueue it back to the ready queue.
+
+8. Define the main function:
+   a. Read the number of processes (n) from the user.
+   b. Declare an array of processes (p) and a ready queue.
+   c. Read arrival times and initialize process attributes.
+   d. Read burst times and initialize remaining time and status.
+   e. Read the time quantum.
+   f. Call the RR function with processes, the number of processes, and the time quantum.
+   g. Print the results using the printResult function.
+
+9. End

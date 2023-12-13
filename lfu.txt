@@ -1,0 +1,24 @@
+1.Start
+
+2.Read the number of frames (fCount) and the reference string (pages).Initialize arrays (frames, time) and variables (i, j, k, pos, flag, faultCount, counter, queue)
+
+3.Initialize frames array with null values.Initialize counters (counter, queue, faultCount)   
+   tp 0.
+
+4.Iterate through the pages in the reference string (i):
+4.1Set flag to 0.
+4.2Check if the page is already present in frames:
+1.If yes, mark a hit, update the occurrence time, and continue to the next page.
+4.3If the page is not present:
+1.Check if there is free space in frames (queue < fCount):
+1.If yes, add the page to frames, update the occurrence time, and increment the queue.
+2.If frames are full (queue == fCount):
+1.Find the LRU page in frames (least recently used) using the findLRU function.
+2.Replace the LRU page with the current page, update the occurrence time.
+4.4Print the current state of frames.
+
+
+
+5.Print the total number of page faults (faultCount).
+
+6. End

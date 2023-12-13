@@ -1,0 +1,67 @@
+1.Start
+2.Node Structure:
+2.1Define a structure node to represent a file or directory with the following fields:
+i.	name: Name of the file or directory.
+ii.	isDir: A boolean indicating whether it is a directory.
+iii.	p: A pointer to the parent directory.
+iv.	c: An array of pointers to children (files or directories).
+v.	i: An index representing the number of children.
+3.Initialization:
+3.1Initialize the root directory named "root" with isDir set to true.
+3.2Set head and curr pointers to point to the root directory.
+4.Functions:
+4.1. ls(): LiFunction ls():
+ If the current directory's index (i) is zero:
+        Print "Empty directory!"
+        Return
+    For each child node in the current directory:
+        If the child is a directory, print "*name*"
+        Else, print "name"
+4.2 touch(): Create a new file or directory.
+
+  		Function touch(isDir):
+    		Create a new node 'temp'
+    		Get the name of the file or directory from the user
+    		Set 'temp' name and 'isDir' based on user input
+    		Set 'temp' parent pointer to the current directory
+    		Add 'temp' to the children array of the current directory
+    		Increment the current directory's index (i)
+	4.3. cd(): Change the current directory.
+		Function cd():
+    		Get the name of the target directory from the user
+   		 For each child node in the current directory:
+       		 If the child is a directory and has the specified name:
+            		Set the current directory pointer to the child
+           		 Return
+    		Print "Directory Not Found!"
+	4.4 cdup(): Move to the parent directory.
+		Function cdup():
+   		 If the current directory's parent pointer is NULL:
+        		Print "You are at the Root Directory"
+        		Return
+    		Set the current directory pointer to its parent
+	4.5 rm(): Delete a file or directory.
+		Function rm(isDir):
+    		Get the name of the file or directory to delete from the user
+   		 For each child node in the current directory:
+       		 If the child has the specified name and matches the type (file or   directory):
+            		Shift the nodes to fill the gap caused by deletion
+            		Decrement the current directory's index (i)
+            		Print "Successfully Deleted"
+            		Return
+    		Print "Not found"
+5.Main Loop
+
+While true:
+    		Display a menu to the user with options to:
+        		1. Show everything in this Directory
+        		2. Change Directory
+        		3. Go to Parent Directory
+        		4. Create New File
+        		5. Delete File
+        		6. Create New Directory
+        		7. Delete Directory
+       		 8. Exit
+    		Prompt the user for their choice
+    		Based on the choice, call the corresponding function
+6.End

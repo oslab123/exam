@@ -1,0 +1,33 @@
+Largest and emallest
+
+Mov s1, 3000
+
+mov CL, 04
+
+mov AL, [SI]
+
+INC SI
+
+mov BL, [SI]
+
+cmp al,BL
+
+jnc
+
+Μου al,bl
+
+mov ah,bl
+
+dec cl
+
+jnz
+
+INC SI
+
+MOV [SI], AL (Largest)
+
+INC 31
+
+MOV [SI], AH (smallest )
+
+HLT
