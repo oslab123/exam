@@ -31,3 +31,10 @@ Algorithm: Round Robin Scheduling
    g. Print the results using the printResult function.
 
 9. End
+
+
+
+tat=bt+wt
+tat=ct-at
+
+wt=tat-bt
